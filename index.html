@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/utility.css">
+    <title>Spotify</title>
+</head>
+<body>
+    <div class="nav-bar flex align-center">
+        <!-- Left section -->
+        <div class="nav-left">
+            <img src="icons/bars-solid.svg" id="bars" style="display: none;" alt="">
+            <img src="icons/logo.svg" alt="">
+        </div>
+
+        <!-- Mid section -->
+        <div class="nav-mid flex align-center">
+            <button class="bg-grey">
+                <img src="icons/home.svg" alt="">
+            </button>
+
+            <div class="input-bar flex align-center">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input placeholder="What do you want to play?">
+                <img src="icons/browse.svg" alt="">
+            </div>
+        </div>
+
+        <!-- Rigt section -->
+        <div class="nav-right">
+            <button class="color1">Sign up</button>
+            <button>Log in</button>
+        </div>
+    </div>
+
+    <!-- Main Section -->
+    <div class="container flex">
+
+        <div class="main-left bg-highlight p1 b1">
+            <div class="library flex">
+                <div class="lib-txt flex gap align-center">
+                    <span>
+                        <img src="icons/lib.svg" alt="">
+                    </span>
+                    <h4>Your Library</h4>
+                </div>
+                <img src="icons/close-solid.svg" id="close" style="display: none;" alt="">
+            </div>
+
+            <div class="songList">
+                <ul>
+                    <!-- Songs will be added through JS -->
+                </ul>
+            </div>
+
+            <div class="footer">
+                <a href="https://www.spotify.com/in-en/legal/" id="">
+                    <span>Legal</span>
+                </a>
+                <a href="https://www.spotify.com/in-en/safetyandprivacy/" id="">
+                    <span>Safety &amp; Privacy Center</span>
+                </a>
+                <a href="https://www.spotify.com/in-en/legal/privacy-policy/" id="">
+                    <span>Privacy Policy</span>
+                </a>
+                <a href="https://www.spotify.com/in-en/legal/cookies-policy/" id="">
+                    <span>Cookies</span>
+                </a>
+                <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3" id="">
+                    <span>About Ads</span>
+                </a>
+                <a href="https://www.spotify.com/in-en/accessibility/" id="">
+                    <span>Accessibility</span>
+                </a>
+                <a draggable="false" href="https://www.spotify.com/legal/cookies-policy/" target="_blank"
+                    rel="noopener">
+                    <span>Cookies</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="main-right flex bg-highlight p1 b1">
+            <div class="cardContainer flex">
+                <!-- Playlists By JS -->
+            </div>
+
+            <!-- Music Controls -->
+            <div class="controls flex">
+
+                <div class="above-bar">
+                    <div class="song-name">
+                        <div id="song-name"></div>
+                    </div>
+
+                    <!-- Song Controls previous/play/next -->
+                    <div class="music-controls flex justify-center">
+                        <img id="prev" src="icons/backward-step-solid.svg" alt="">
+                        <img id="play" src="icons/play-solid.svg" alt="">
+                        <img id="next" src="icons/forward-step-solid.svg" alt="">
+                    </div>
+
+                    <div class="time-vol">
+                        <div class="song-length">
+                            00:00/00:00
+                        </div>
+                        <div class="volume flex align-center gap">
+                            <img id="vol-img" src="icons/volume-low-solid.svg" alt="">
+                            <input type="range" name="" id="volume">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="seek-bar">
+                    <div class="circle">
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

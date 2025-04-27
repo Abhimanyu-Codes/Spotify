@@ -1,0 +1,43 @@
+.flex{
+    display: flex;
+}
+.justify-center{
+    justify-content: center;
+}
+.align-center{
+    align-items: center;
+}
+button{
+    background: none;
+    border: none;
+}
+.red{
+    border: 2px solid red;
+}
+.bg-pink{
+    background: pink;
+}
+.bg-grey{
+    background-color: #1f1f1f;
+}
+
+.color1{
+    color: #b3b3b3;
+}
+
+.bg-highlight{
+    background-color: #121212;
+}
+.gap{
+    gap: 10px;
+}
+
+.b1{
+    border-radius: 6px;
+}.p1{
+    padding: 21px;
+}
+
+.r{
+    color: red;
+}
