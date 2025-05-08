@@ -24,7 +24,7 @@ async function getSongs(folder) {
     songUL.innerHTML = ""
     songs.forEach((song) => {
         let li = document.createElement("li")
-        li.innerHTML = ` <img src="music-solid.svg" alt="">
+        li.innerHTML = ` <img src="./music-solid.svg" alt="">
                         <div class="song-info">
                         <div>${song}</div>
                         </div>`
@@ -53,10 +53,10 @@ function convertSecondsToTimeFormat(seconds) {
 }
 
 function playMusic(track, pause = false) {
-    currSong.src = `/songs/${currfolder}/${track}`
+    currSong.src = `./songs/${currfolder}/${track}`
     currSong.load()
     if (pause == false) {
-        play.src = "icons/pause-solid.svg"
+        play.src = "./icons/pause-solid.svg"
         currSong.play()
     }
     document.getElementById("song-name").innerHTML = track
@@ -78,7 +78,7 @@ async function displayFolder() {
                     <div style="position: absolute;" class="play">
 
                     </div>
-                    <img src="/songs/${folder}/cover.jpg">
+                    <img src="./songs/${folder}/cover.jpg">
                     <h2>${response.title}</h2>    
                     <p>${response.desc}</p>
                     </div>`
@@ -109,10 +109,10 @@ async function displayFolder() {
     play.addEventListener("click", () => {
         if (currSong.paused && currSong.src != "") {
             currSong.play()
-            play.src = "icons/pause-solid.svg"
+            play.src = "./icons/pause-solid.svg"
         } else {
             currSong.pause()
-            play.src = "icons/play-solid.svg"
+            play.src = "./icons/play-solid.svg"
         }
     })
 
@@ -153,11 +153,11 @@ async function displayFolder() {
         const volImg = document.getElementById("vol-img")
 
         if (volumeValue == 0) {
-            volImg.src = 'icons/volume-xmark-solid.svg'
+            volImg.src = './icons/volume-xmark-solid.svg'
         } else if (volumeValue == 100) {
-            volImg.src = 'icons/volume-high-solid.svg'
+            volImg.src = './icons/volume-high-solid.svg'
         } else {
-            volImg.src = 'icons/volume-low-solid.svg'
+            volImg.src = './icons/volume-low-solid.svg'
         }
         currSong.volume = volumeValue / 100
     })
@@ -168,11 +168,11 @@ async function displayFolder() {
         const volume = document.getElementById("volume");
 
         if (currSong.volume > 0) {
-            volImg.src = "icons/volume-xmark-solid.svg"
+            volImg.src = "./icons/volume-xmark-solid.svg"
             volume.value = 0
             currSong.volume = 0
         } else {
-            volImg.src = "icons/volume-low-solid.svg"
+            volImg.src = "./icons/volume-low-solid.svg"
             volume.value = 30
             currSong.volume = 0.3
         }
